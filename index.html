@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101828"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css"><title>Croner HR Radar</title></head>
+<body>
+<header><div><small>CRONER</small><h1>HR Radar</h1></div><span id="mode">DEMO</span></header>
+<main>
+<section class="hero"><div class="tag">GOOGLE JOBS</div><h2>Find companies making their first HR hire.</h2>
+<p>Searches Google Jobs for early- HR hiring signals, then turns the results into a call list.</p>
+<div class="controls"><input id="location" value="United Kingdom" placeholder="Location"><input id="custom" placeholder="Optional search phrase"><button id="search">Find prospects</button></div></section>
+<div class="stats"><div><b id="count">0</b><small>prospects</small></div><div><b id="hot">0</b><small>high signal</small></div><div><b id="saved">0</b><small>saved</small></div></div>
+<div class="bar"><input id="filter" placeholder="Filter prospects…"><button id="export">CSV</button><button id="settings">Key</button></div>
+<div id="keybox" class="keybox" hidden>
+  <input id="apiKey" type="password" placeholder="Paste SerpApi key">
+  <button id="saveKey">Save key on this iPhone</button>
+  <small>The key is stored in this browser's local storage and sent directly to SerpApi.</small>
+</div>
+<div id="status"></div><section id="results"></section>
+</main>
+<dialog id="dialog"><div id="detail"></div><button class="close" onclick="dialog.close()">Close</button></dialog>
+<script src="/app.js"></script></body></html>
