@@ -25,6 +25,7 @@
 <main>
 
 <section class="hero">
+
   <div class="tag">GOOGLE JOBS</div>
 
   <h2>Find companies making their first HR hire.</h2>
@@ -35,6 +36,7 @@
   </p>
 
   <div class="controls">
+
     <input
       id="location"
       value="United Kingdom"
@@ -46,11 +48,16 @@
       placeholder="Optional search phrase"
     >
 
-    <button id="search">Find prospects</button>
+    <button id="search">
+      Find prospects
+    </button>
+
   </div>
+
 </section>
 
 <div class="stats">
+
   <div>
     <b id="count">0</b>
     <small>prospects</small>
@@ -65,34 +72,63 @@
     <b id="saved">0</b>
     <small>saved</small>
   </div>
+
 </div>
 
 <div class="bar">
+
   <input
     id="filter"
     placeholder="Filter prospects…"
   >
 
-  <button id="export">CSV</button>
+  <button id="export">
+    CSV
+  </button>
 
-  <button id="settings">Key</button>
+  <button
+    id="settings"
+    type="button"
+    onclick="document.getElementById('keybox').hidden = false"
+  >
+    Key
+  </button>
+
 </div>
 
-<div id="keybox" class="keybox" hidden>
+<!-- KEY BOX -->
+
+<div
+  id="keybox"
+  class="keybox"
+  hidden
+>
+
+  <h3>SerpApi Key</h3>
 
   <input
     id="apiKey"
-    type="password"
+    type="text"
+    autocomplete="off"
     placeholder="Paste SerpApi key"
   >
 
-  <button id="saveKey">
+  <button
+    id="saveKey"
+    type="button"
+  >
     Save key on this iPhone
   </button>
 
+  <button
+    type="button"
+    onclick="document.getElementById('keybox').hidden = true"
+  >
+    Close
+  </button>
+
   <small>
-    The key is stored in this browser's local storage
-    and sent directly to SerpApi.
+    Your key is stored on this iPhone's browser.
   </small>
 
 </div>
@@ -109,7 +145,7 @@
 
   <button
     class="close"
-    onclick="dialog.close()"
+    onclick="document.getElementById('dialog').close()"
   >
     Close
   </button>
